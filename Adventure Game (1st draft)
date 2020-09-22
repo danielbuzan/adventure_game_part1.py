@@ -1,0 +1,98 @@
+print("Snowy Mountians")
+print("Start Game [1]")
+health = 40
+choice = input("")
+if choice == "1":
+  print("Your vision returns from a blur, and you feel cold and hungry")
+print("Health = 40")
+print ()
+print("You see that you are in a snowy mountain range, with no one around you.")
+print()
+print("You check around you and see a matchbox, oreo and a pencil...")
+print("[1] Matchbox")
+print("[2] Oreo")
+print("[3] Pencil")
+if choice == "1":
+  matchbox = 1
+else: matchbox = 0
+if choice == "2":
+    oreo = 1
+else: oreo = 0
+if choice == "3":
+  pencil = 1
+else: pencil = 0
+choice = input("What do you pick up? ")
+print()
+print("Item added")
+print("It is starting to get too cold for you to survive, what do you do? ")
+print("[1] Create a fire.")
+print("[2] Hide in a nearby cave ")
+choice = input("Enter choice...")
+if choice == "2":
+  print("You seek refuge into a cave, you are warm for now.")
+if choice == "1":
+  if matchbox > 0:
+    health = health + 20
+    print("A fire keeps you very warm and gives you strength.")
+    print("Health = 60")
+  if matchbox < 1:
+    print("You have nothing to start the fire with, so you go into the cave.")
+    print()
+print("The storm has passed, you can look around now")
+print()
+print("You stumble upon a sword, what do you do with it ?")
+print("[1] keep it")
+print("[2] ignore it")
+choice = input("Enter Choice ")
+if choice == "1":
+  print("sword added")
+  have_sword = True
+if choice == "2":
+  have_sword = False
+  print("You continue on your journey.")
+  print()
+  print("You start to get hungry and see a rabbit in front of you...")
+  print("What will you do")
+  print("[1] hunt rabbit")
+  print("[2] leave rabbit alone")
+  print("[3] eat something")
+choice = input("Enter Option ")
+if choice == "1":
+  if have_sword == True:
+   print("You now have rabbit meat to eat.")
+have_rabbit = True
+if have_sword == False:
+  print("You have nothing to hunt the rabbit with")
+
+if choice == "3":
+  if oreo > 0:
+    print("You eat the oreo you found earlier")
+    print ("Health = 70")
+    health = health + 30
+if oreo < 1:
+  print("You have nothing to eat")
+  print("What will you do? ")
+  print()
+  print("[1] hunt rabbit")
+  print("[2] leave rabbit alone")
+choice = input("Enter Option ")
+
+if choice == "2":
+  print("You choose to leave the rabbit alone ")
+  print("There is no food for you to eat, and so you freeze in the snow.")
+  print()
+  print("Game Over")
+
+if choice == "1":
+  if have_sword == True:
+    print("You eat the rabbit and gain full strength.    Health = 100")
+    health = 100
+    print()
+    print("Continuing on your journey you see a village, Hooray! You are saved!")
+    print()
+    print("Victory!")
+  if have_sword == False:
+    print("You have nothing to hunt the rabbit with")
+    print("There is no food for you to eat, and so you freeze in the snow.")
+    print()
+    print("Game Over")
